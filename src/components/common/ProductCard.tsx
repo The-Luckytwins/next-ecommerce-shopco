@@ -14,7 +14,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
       href={`/shop/product/${data.id}/${data.title.split(" ").join("-")}`}
       className="flex flex-col items-start aspect-auto"
     >
-      <div className="bg-[#F0EEED] rounded-[13px] lg:rounded-[20px] w-full lg:max-w-[295px] aspect-square mb-2.5 xl:mb-4 overflow-hidden">
+      <div className="bg-[#F7ECEF] rounded-[13px] lg:rounded-[20px] w-full lg:max-w-[295px] aspect-square mb-2.5 xl:mb-4 overflow-hidden">
         <Image
           src={data.srcUrl}
           width={295}
@@ -66,12 +66,12 @@ const ProductCard = ({ data }: ProductCardProps) => {
           </span>
         )}
         {data.discount.percentage > 0 ? (
-          <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
+          <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#A45A69]/10 text-[#8E2947]">
             {`-${data.discount.percentage}%`}
           </span>
         ) : (
           data.discount.amount > 0 && (
-            <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
+            <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#A45A69]/10 text-[#8E2947]">
               {`-$${data.discount.amount}`}
             </span>
           )

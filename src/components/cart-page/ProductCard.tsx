@@ -25,7 +25,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
     <div className="flex items-start space-x-4">
       <Link
         href={`/shop/product/${data.id}/${data.name.split(" ").join("-")}`}
-        className="bg-[#F0EEED] rounded-lg w-full min-w-[100px] max-w-[100px] sm:max-w-[124px] aspect-square overflow-hidden"
+        className="bg-[#F7ECEF] rounded-lg w-full min-w-[100px] max-w-[100px] sm:max-w-[124px] aspect-square overflow-hidden"
       >
         <Image
           src={data.srcUrl}
@@ -62,13 +62,13 @@ const ProductCard = ({ data }: ProductCardProps) => {
           </Button>
         </div>
         <div className="-mt-1">
-          <span className="text-black text-xs md:text-sm mr-1">Size:</span>
+          <span className="text-black text-xs md:text-sm mr-1">Format:</span>
           <span className="text-black/60 text-xs md:text-sm">
             {data.attributes[0]}
           </span>
         </div>
         <div className="mb-auto -mt-1.5">
-          <span className="text-black text-xs md:text-sm mr-1">Color:</span>
+          <span className="text-black text-xs md:text-sm mr-1">Shade:</span>
           <span className="text-black/60 text-xs md:text-sm">
             {data.attributes[1]}
           </span>

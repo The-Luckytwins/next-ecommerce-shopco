@@ -19,11 +19,11 @@ const ReviewsContent = () => {
           <h3 className="text-xl sm:text-2xl font-bold text-black mr-2">
             All Reviews
           </h3>
-          <span className="text-sm sm:text-base text-black/60">(451)</span>
+          <span className="text-sm sm:text-base text-black/60">(6)</span>
         </div>
         <div className="flex items-center space-x-2.5">
           <Select defaultValue="latest">
-            <SelectTrigger className="min-w-[120px] font-medium text-xs sm:text-base px-4 py-3 sm:px-5 sm:py-4 text-black bg-[#F0F0F0] border-none rounded-full h-12">
+            <SelectTrigger className="min-w-[120px] font-medium text-xs sm:text-base px-4 py-3 sm:px-5 sm:py-4 text-black bg-[#F8F0F2] border-none rounded-full h-12">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -35,7 +35,7 @@ const ReviewsContent = () => {
 
           <Button
             type="button"
-            className="sm:min-w-[166px] px-4 py-3 sm:px-5 sm:py-4 rounded-full bg-black font-medium text-xs sm:text-base h-12"
+            className="sm:min-w-[166px] px-4 py-3 sm:px-5 sm:py-4 rounded-full bg-[#4A152C] hover:bg-[#4A152C]/90 font-medium text-xs sm:text-base h-12"
           >
             Write a Review
           </Button>

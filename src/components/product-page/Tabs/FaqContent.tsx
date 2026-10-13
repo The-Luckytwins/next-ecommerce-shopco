@@ -1,67 +1,27 @@
 import React from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-type FaqItem = {
-  question: string;
-  answer: string;
-};
-
-const faqsData: FaqItem[] = [
-  {
-    question: "What is the material of the t-shirt?",
-    answer:
-      "Provide details about the fabric type (e.g., cotton, polyester, blend), weight, and any specific features.",
-  },
-  {
-    question: "What are the care instructions for the t-shirt?",
-    answer:
-      "Outline recommended washing, drying, and ironing methods to maintain quality and longevity.",
-  },
-  {
-    question: "What is the design or print on the t-shirt made of?",
-    answer:
-      "Explain the material used for the design (e.g., vinyl, screen print, embroidery) and its durability.",
-  },
-  {
-    question: "Is the t-shirt unisex or designed for specific genders?",
-    answer:
-      "Indicate whether the shirt is suitable for both men and women or targeted towards a particular gender.",
-  },
-  {
-    question: "What are the shipping options and costs?",
-    answer:
-      "Provide information about shipping methods, estimated delivery times, and associated fees.",
-  },
-  {
-    question: "What is the return policy for the t-shirt?",
-    answer:
-      "Outline the return window, conditions, and refund or exchange procedures.",
-  },
+const faqsData = [
+  { question: "How do I choose the right product for my routine?", answer: "Start with the product description and intended use. Add new products to your routine gradually and follow the directions on each package." },
+  { question: "Where can I find the ingredients?", answer: "Check the ingredient list on the product packaging before use. If you have known sensitivities, review the full list carefully." },
+  { question: "How should I store my beauty products?", answer: "Unless the packaging says otherwise, keep products tightly closed and away from direct heat or sunlight." },
+  { question: "Can I try a shade before choosing?", answer: "Use the product images and shade options as a guide. Screen settings and lighting can affect how a shade appears, so the result may look different in person." },
+  { question: "What if my skin is sensitive?", answer: "Review the ingredient list and follow the package directions. Consider a patch test before using a new product, and stop use if irritation occurs." },
+  { question: "Where can I find delivery and return information?", answer: "Please confirm delivery options and the applicable return policy with Lady Porsh before placing an order." },
 ];
 
-const FaqContent = () => {
-  return (
-    <section>
-      <h3 className="text-xl sm:text-2xl font-bold text-black mb-5 sm:mb-6">
-        Frequently asked questions
-      </h3>
-      <Accordion type="single" collapsible>
-        {faqsData.map((faq, idx) => (
-          <AccordionItem key={idx} value={`item-${idx + 1}`}>
-            <AccordionTrigger className="text-left">
-              {faq.question}
-            </AccordionTrigger>
-            <AccordionContent>{faq.answer}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </section>
-  );
-};
+const FaqContent = () => (
+  <section>
+    <h3 className="text-xl sm:text-2xl font-bold text-black mb-5 sm:mb-6">Frequently asked questions</h3>
+    <Accordion type="single" collapsible>
+      {faqsData.map((faq, idx) => (
+        <AccordionItem key={idx} value={"item-" + (idx + 1)}>
+          <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
+          <AccordionContent>{faq.answer}</AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  </section>
+);
 
 export default FaqContent;
