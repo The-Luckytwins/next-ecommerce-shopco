@@ -31,7 +31,7 @@ export default function CartPage() {
                 "font-bold text-[32px] md:text-[40px] text-black uppercase mb-5 md:mb-6",
               ])}
             >
-              your cart
+              your beauty bag
             </h2>
             <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5 items-start">
               <div className="w-full p-3.5 md:px-6 flex-col space-y-4 md:space-y-6 rounded-[20px] border border-black/10">
@@ -93,14 +93,14 @@ export default function CartPage() {
                   </InputGroup>
                   <Button
                     type="button"
-                    className="bg-black rounded-full w-full max-w-[119px] h-[48px]"
+                    className="bg-[#4A152C] hover:bg-[#4A152C]/90 rounded-full w-full max-w-[119px] h-[48px]"
                   >
                     Apply
                   </Button>
                 </div>
                 <Button
                   type="button"
-                  className="text-sm md:text-base font-medium bg-black rounded-full w-full py-4 h-[54px] md:h-[60px] group"
+                  className="text-sm md:text-base font-medium bg-[#4A152C] hover:bg-[#4A152C]/90 rounded-full w-full py-4 h-[54px] md:h-[60px] group"
                 >
                   Go to Checkout{" "}
                   <FaArrowRight className="text-xl ml-2 group-hover:translate-x-1 transition-all" />
@@ -111,7 +111,7 @@ export default function CartPage() {
         ) : (
           <div className="flex items-center flex-col text-gray-300 mt-32">
             <TbBasketExclamation strokeWidth={1} className="text-6xl" />
-            <span className="block mb-4">Your shopping cart is empty.</span>
+            <span className="block mb-4">Your beauty bag is waiting for a little something lovely.</span>
             <Button className="rounded-full w-24" asChild>
               <Link href="/shop">Shop</Link>
             </Button>

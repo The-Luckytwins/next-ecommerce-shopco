@@ -19,7 +19,7 @@ const Header = ({ data }: { data: Product }) => {
           <h1
             className={cn([
               integralCF.className,
-              "text-2xl md:text-[40px] md:leading-[40px] mb-3 md:mb-3.5 capitalize",
+              "text-2xl md:text-[40px] md:leading-[40px] mb-3 md:mb-3.5 capitalize text-[#4A152C]",
             ])}
           >
             {data.title}
@@ -65,20 +65,19 @@ const Header = ({ data }: { data: Product }) => {
               </span>
             )}
             {data.discount.percentage > 0 ? (
-              <span className="font-medium text-[10px] sm:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
+              <span className="font-medium text-[10px] sm:text-xs py-1.5 px-3.5 rounded-full bg-[#A45A69]/10 text-[#8E2947]">
                 {`-${data.discount.percentage}%`}
               </span>
             ) : (
               data.discount.amount > 0 && (
-                <span className="font-medium text-[10px] sm:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
+                <span className="font-medium text-[10px] sm:text-xs py-1.5 px-3.5 rounded-full bg-[#A45A69]/10 text-[#8E2947]">
                   {`-$${data.discount.amount}`}
                 </span>
               )
             )}
           </div>
           <p className="text-sm sm:text-base text-black/60 mb-5">
-            This graphic t-shirt which is perfect for any occasion. Crafted from
-            a soft and breathable fabric, it offers superior comfort and style.
+            {data.description ?? "A beauty essential from Lady Porsh, made to bring a little more intention to your everyday ritual."}
           </p>
           <hr className="h-[1px] border-t-black/10 mb-5" />
           <ColorSelection />
